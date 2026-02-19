@@ -131,10 +131,10 @@ For monorepos or when symbols span multiple packages:
 
 ```bash
 # Find all usages of a pattern across source and test dirs
-uv run find-and-grep --roots src,packages,libs \
+uv run find-and-grep --roots src packages libs \
   --query "class.*Service" --extensions ts
 
 # Find all imports of a module
 uv run find-and-grep --roots src \
-  --query "import.*from.*auth" --extensions ts,tsx
+  --query "import.*from.*auth" --extensions ts tsx
 ```

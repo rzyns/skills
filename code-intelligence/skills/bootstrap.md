@@ -2,7 +2,7 @@
 
 Run this skill when any of the following are missing from the project root:
 - `.grepai/` directory
-- `.flyto-index/` directory
+- `.flyto/` directory
 - `.taskmaster/` directory (only needed if planning tasks)
 
 ---
@@ -78,16 +78,16 @@ Expected output: `.grepai/` directory created with `config.yaml`, `symbols.gob`,
 # Initialize the project (creates config, required before first scan)
 flyto-index init .
 
-# Full scan (first time)
-flyto-index scan .
+# Full scan (first time — forces complete rebuild)
+flyto-index scan . --full
 
 # Verify index was created
-ls .flyto-index/
+ls .flyto/
 ```
 
-Expected files: `index.json`, `content.jsonl`, `PROJECT_MAP.json`, `manifest.json`, `bm25.json`
+Expected output: `.flyto/` directory created with index files.
 
-For subsequent sessions, run `flyto-index scan .` again — incremental re-scanning (only changed files) is automatic based on content hashes.
+For subsequent sessions, run `flyto-index scan .` (without `--full`) — incremental re-scanning (only changed files) is automatic based on content hashes.
 
 ---
 
@@ -139,7 +139,7 @@ flyto-index status .
 - [ ] All CLI binaries respond to `--help` or `--version`
 - [ ] `OPENAI_API_KEY` set in environment (or local embedder running)
 - [ ] `.grepai/` directory exists and watcher is running
-- [ ] `.flyto-index/` directory exists with `index.json`, `bm25.json`, `manifest.json`
+- [ ] `.flyto/` directory exists (created by `flyto-index init .`)
 - [ ] `flyto-index brief .` produced output
 - [ ] `PROJECT_NAME` variable resolved correctly from `package.json`
 

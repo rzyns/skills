@@ -52,7 +52,7 @@ Severity: `2` = error, `1` = warning.
 
 ```bash
 # Quick summary: errors only (exit 0 = clean)
-eslint src/ --quiet --format compact
+eslint src/ --quiet --format stylish
 
 # Count total errors
 eslint src/ --format json | \
@@ -86,15 +86,13 @@ eslint src/ --fix --rule "no-trailing-spaces: error"
 ```bash
 # Only specific rules (useful when investigating a single issue type)
 eslint src/ \
-  --rule "no-unused-vars: error" \
-  --rule "no-console: warn" \
+  --rule '{"no-unused-vars": "error"}' \
+  --rule '{"no-console": "warn"}' \
   --format json
 
-# Ignore test files for production code audit
-eslint src/ \
-  --ignore-pattern "*.test.ts" \
-  --ignore-pattern "*.spec.ts" \
-  --format json
+# Ignore test files for production code audit (ESLint 9: use ignores in eslint.config.js)
+# eslint.config.js: export default [{ ignores: ["**/*.test.ts", "**/*.spec.ts"] }]
+eslint src/ --format json
 ```
 
 ---
@@ -199,5 +197,5 @@ eslint src/auth/ src/middleware/ --format json
 - [ ] `eslint src/ --max-warnings 10` — warnings under threshold
 - [ ] `npx tsc --noEmit` — no TypeScript type errors
 - [ ] High-complexity functions reviewed (`--advanced`)
-- [ ] No unused variables or imports (no-unused-vars, @typescript-eslint/no-unused-vars)
+- [ ] No unused variables or imports (`eslint src/ --rule '{"no-unused-vars": "error"}'` or @typescript-eslint/no-unused-vars)
 - [ ] `eslint src/ --fix` applied for auto-fixable issues

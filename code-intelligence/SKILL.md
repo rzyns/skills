@@ -42,7 +42,7 @@ Read the sub-skill file that matches the task before doing any work.
 | Planning a feature from a PRD or brief | `skills/plan.md` |
 | Auditing code quality, finding lint issues | `skills/quality.md` |
 
-**Always check bootstrap first** if `.grepai/`, `.flyto-index/`, or `.taskmaster/` do not exist in the project root.
+**Always check bootstrap first** if `.grepai/`, `.flyto/`, or `.taskmaster/` do not exist in the project root.
 
 ---
 

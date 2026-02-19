@@ -23,14 +23,14 @@ The PRD should include: goals, user stories or requirements, constraints, and an
 ## Step 2: Parse PRD into Tasks
 
 ```bash
-# Let AI determine task count based on complexity
-task-master parse-prd .taskmaster/docs/prd.md --num-tasks 0
+# Generate tasks (default: 10 tasks)
+task-master parse-prd --input=.taskmaster/docs/prd.md
 
 # Or specify a target count
-task-master parse-prd .taskmaster/docs/prd.md --num-tasks 15
+task-master parse-prd --input=.taskmaster/docs/prd.md --num-tasks 15
 
 # Append to existing tasks (for multi-PRD or phased projects)
-task-master parse-prd .taskmaster/docs/feature-prd.md --append
+task-master parse-prd --input=.taskmaster/docs/feature-prd.md --append
 ```
 
 This creates structured tasks in `.taskmaster/tasks/tasks.json`.
@@ -180,7 +180,7 @@ cat .taskmaster/tasks/tasks.json
 
 ## Planning Workflow Summary
 
-1. `task-master parse-prd prd.md` → generate tasks
+1. `task-master parse-prd --input=prd.md` → generate tasks
 2. `task-master analyze-complexity` → identify complex tasks
 3. `task-master expand --all` → break down complex tasks
 4. `task-master validate-dependencies` → verify ordering

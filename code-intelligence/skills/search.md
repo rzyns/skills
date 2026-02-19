@@ -110,15 +110,15 @@ uv run find-and-grep --roots src \
 
 # Find specific function definitions
 uv run find-and-grep --roots src \
-  --query "function validate" --extensions ts,js
+  --query "function validate" --extensions ts js
 
 # Find all imports of a specific module
 uv run find-and-grep --roots src \
-  --query "import.*from.*'@/auth'" --extensions ts,tsx
+  --query "import.*from.*'@/auth'" --extensions ts tsx
 
 # Search across multiple root directories (monorepo)
-uv run find-and-grep --roots src,packages,libs \
-  --query "useEffect.*\[\]" --extensions tsx,jsx
+uv run find-and-grep --roots src packages libs \
+  --query "useEffect.*\[\]" --extensions tsx jsx
 ```
 
 ---
