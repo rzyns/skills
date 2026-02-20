@@ -9,14 +9,15 @@ Run this skill when any of the following are missing from the project root:
 
 ## Step 0: Verify Prerequisites
 
+Run the bootstrap check script from the project root for a full status report:
+
 ```bash
-# Check what's installed
-which grepai repomix flyto-index task-master eslint && \
-  uv run tree-sitter-analyzer --version 2>/dev/null && \
-  echo "All CLI tools present"
+bash <skill-dir>/scripts/check-bootstrap.sh
 ```
 
-If any are missing, install them:
+This checks all binaries, index directories, watcher status, and environment in one pass — exits 0 if ready, 1 if action needed. If the skill directory is unknown, find it with `find ~/.claude -name "check-bootstrap.sh" 2>/dev/null`.
+
+If any tools are missing, install them:
 
 ```bash
 # Go binary

@@ -71,3 +71,15 @@ These are available without any CLI setup:
 - Use `--compress` on repomix unless full source is needed
 - Use `--partial-read` on tree-sitter-analyzer instead of reading full files
 - Pipe to `head -c 8000` if a CLI output is unexpectedly large
+
+---
+
+## Bundled Resources
+
+**`scripts/check-bootstrap.sh`** — Run from project root to verify all prerequisites in one pass. Checks binaries, index directories, watcher status, and environment. Exits 0 if ready, 1 if action needed.
+
+```bash
+bash <path-to-skill>/scripts/check-bootstrap.sh
+```
+
+**`references/tool-flags.md`** — Verified flag reference for all 7 CLI tools. Load this when unsure of a specific flag syntax before running a command. Includes critical gotchas (e.g. `find-and-grep` space-separated args, ESLint 9 removals).
