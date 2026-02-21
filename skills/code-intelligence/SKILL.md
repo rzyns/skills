@@ -1,6 +1,7 @@
 ---
 name: code-intelligence
 description: CLI-first code intelligence for authoring, editing, and reasoning about TypeScript/JavaScript codebases. Use this skill whenever working with an unfamiliar codebase, searching for code by meaning or pattern, planning a refactor, assessing blast radius before changing a symbol, planning features from a PRD, or auditing code quality. Also use proactively any time the task involves navigating, understanding, or modifying a non-trivial TS/JS codebase — even if the user doesn't explicitly ask for code intelligence tools.
+allowed-tools: Bash(task-master expand:*) Bash(uv run tree-sitter-analyzer:*) Bash(pip show:*)
 ---
 
 # Code Intelligence — Master Dispatcher

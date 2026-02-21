@@ -1,9 +1,0 @@
-{
-  "permissions": {
-    "allow": [
-      "Bash(task-master expand:*)",
-      "Bash(uv run tree-sitter-analyzer:*)",
-      "Bash(pip show:*)"
-    ]
-  }
-}
