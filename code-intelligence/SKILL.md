@@ -69,7 +69,7 @@ These are available without any CLI setup:
 - Prefer `--json --compact` on all grepai calls
 - Prefer `--toon` over `--json` when output is for reasoning (not parsing)
 - Use `--compress` on repomix unless full source is needed
-- Use `--partial-read` on tree-sitter-analyzer instead of reading full files
+- Use `--partial-read --start-line N` on tree-sitter-analyzer instead of reading full files
 - Pipe to `head -c 8000` if a CLI output is unexpectedly large
 
 ---

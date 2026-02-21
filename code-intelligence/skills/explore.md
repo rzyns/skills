@@ -119,7 +119,7 @@ For a completely unknown TypeScript/JavaScript codebase:
 3. `repomix --compress --stdout` → scan all signatures
 4. `uv run tree-sitter-analyzer <key-file> --table full` → inspect important files
 5. `grepai search "<domain concept>" --json --compact` → locate relevant code semantically
-6. `uv run tree-sitter-analyzer <file> --partial-read` → read only the relevant sections
+6. `uv run tree-sitter-analyzer <file> --partial-read --start-line N --end-line M` → read only the relevant sections
 
 This sequence typically achieves **70–90% token reduction** vs reading raw files directly.
 

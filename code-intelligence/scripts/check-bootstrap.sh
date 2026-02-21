@@ -56,7 +56,7 @@ else
 fi
 
 # uv-based tools
-if uv run tree-sitter-analyzer --version &>/dev/null 2>&1; then
+if uv run tree-sitter-analyzer --show-supported-languages &>/dev/null 2>&1; then
   check "uv run tree-sitter-analyzer" "pass" ""
 else
   check "uv run tree-sitter-analyzer" "fail" "install: pip install tree-sitter-analyzer[mcp]"

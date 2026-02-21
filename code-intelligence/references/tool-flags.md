@@ -141,7 +141,7 @@ uv run tree-sitter-analyzer <file_path>
   --table full|compact|csv|json|toon   Full element table
   --advanced             Complexity metrics per function
   --json                 JSON output (alias: --output-format json)
-  --toon                 TOON output (alias: --output-format toon)
+  --format toon          TOON output (alias: --output-format toon)
 
   --query-key <key>      Query by type: "methods", "class", "imports", etc.
   --filter "name=X"      Filter results (e.g. "name=handleLogin", "public=true")
