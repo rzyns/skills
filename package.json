@@ -1,0 +1,13 @@
+{
+  "name": "@rzyns/skills",
+  "version": "1.0.0",
+  "description": "Claude Code agent skills for code intelligence workflows",
+  "private": false,
+  "keywords": [
+    "claude-code",
+    "skills",
+    "code-intelligence",
+    "agent-skills"
+  ],
+  "license": "MIT"
+}
