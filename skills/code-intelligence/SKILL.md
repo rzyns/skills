@@ -35,12 +35,12 @@ Read the sub-skill file that matches the task before doing any work.
 
 | Situation | Read |
 |-----------|------|
-| Tools not yet installed / fresh codebase | `skills/bootstrap.md` |
-| New codebase, need to understand structure | `skills/explore.md` |
-| Finding code by meaning, name, or pattern | `skills/search.md` |
-| Before changing a symbol / refactoring | `skills/impact.md` |
-| Planning a feature from a PRD or brief | `skills/plan.md` |
-| Auditing code quality, finding lint issues | `skills/quality.md` |
+| Tools not yet installed / fresh codebase | `references/bootstrap.md` |
+| New codebase, need to understand structure | `references/explore.md` |
+| Finding code by meaning, name, or pattern | `references/search.md` |
+| Before changing a symbol / refactoring | `references/impact.md` |
+| Planning a feature from a PRD or brief | `references/plan.md` |
+| Auditing code quality, finding lint issues | `references/quality.md` |
 
 **Always check bootstrap first** if `.grepai/`, `.flyto/`, or `.taskmaster/` do not exist in the project root.
 

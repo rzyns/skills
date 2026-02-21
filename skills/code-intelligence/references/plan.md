@@ -2,7 +2,7 @@
 
 Use this skill when you have a product requirements document (PRD), feature brief, or written specification and need to convert it into a structured, dependency-ordered task list.
 
-**Prerequisite**: `task-master init` has been run (`.taskmaster/` directory exists). See `skills/bootstrap.md` if not.
+**Prerequisite**: `task-master init` has been run (`.taskmaster/` directory exists). See `references/bootstrap.md` if not.
 
 ---
 
